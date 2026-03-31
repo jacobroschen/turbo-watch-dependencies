@@ -1,18 +1,16 @@
 {
   "$schema": "https://turborepo.dev/schema.json",
   "tasks": {
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^build"]
+    },
     "build": {
-      "dependsOn": [
-        "prebuild",
-        "^build"
-      ],
       "outputs": [
         "output-file.txt",
         "dist/**"
       ]
     },
-    "prebuild": {},
-    "lint": {},
-    "check-types": {}
   }
 }
